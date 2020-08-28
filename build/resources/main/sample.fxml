@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.Tab?>
+
+
+<?import java.net.URL?>
+<AnchorPane fx:controller="Controller"
+  xmlns:fx="http://javafx.com/fxml">
+
+  <TabPane>
+    <Tab fx:id="tab1" text="Product Line">
+      <fx:include source="Tab1.fxml"/>
+    </Tab>
+    <Tab fx:id="tab2" text="Produce">
+      <fx:include source="Tab2.fxml"/>
+    </Tab>
+    <Tab fx:id="tab3" text="Production Log">
+      <fx:include source="Tab3.fxml"/>
+    </Tab>
+  </TabPane>
+  <stylesheets>
+    <URL value="@style.css" />
+  </stylesheets>
+</AnchorPane>

@@ -8,8 +8,8 @@ For Future Diagrams
 
 ## Built With
 
-Intellij
-H2 Database  
+Intellij <br />
+H2 Database  <br />
 JavaFx
 
 ## Author

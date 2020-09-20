@@ -1,26 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.control.TabPane?>
-<?import javafx.scene.control.Tab?>
-
-
 <?import java.net.URL?>
-<AnchorPane fx:controller="Controller"
-  xmlns:fx="http://javafx.com/fxml">
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
 
-  <TabPane>
+<AnchorPane prefHeight="574.0" prefWidth="766.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+
+  <TabPane prefHeight="578.0" prefWidth="766.0">
     <Tab fx:id="tab1" text="Product Line">
-      <fx:include source="Tab1.fxml"/>
+      <AnchorPane prefHeight="549.0" prefWidth="766.0">
+        <GridPane prefHeight="534.0" prefWidth="766.0">
+          <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="378.199951171875" minWidth="10.0" prefWidth="363.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="403.0" minWidth="10.0" prefWidth="403.0" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints maxHeight="124.20001831054688" minHeight="10.0" prefHeight="111.40000610351562" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="163.9999755859375" minHeight="10.0" prefHeight="102.59999389648438" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="238.40000610351564" minHeight="10.0" prefHeight="212.0000030517578" vgrow="SOMETIMES" />
+          </rowConstraints>
+          <TextField fx:id="txtfProductName" prefHeight="34.0" prefWidth="288.0" GridPane.halignment="CENTER" />
+          <TextField fx:id="txtfManufacturer" prefHeight="34.0" prefWidth="288.0" translateY="-20.0" GridPane.rowIndex="1" />
+          <Label text="Product Name" GridPane.halignment="CENTER" GridPane.valignment="TOP" />
+          <Label text="Manufacturer" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+          <Label prefHeight="28.0" prefWidth="122.0" text="Item Type" translateY="-50.0" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+          <Button mnemonicParsing="false" onAction="#btnAddProductPressed" prefHeight="42.0" prefWidth="146.0" text="Add Product" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+          <TableView prefHeight="239.0" prefWidth="373.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <columns>
+              <TableColumn prefWidth="75.0" text="C1" />
+              <TableColumn prefWidth="75.0" text="C2" />
+            </columns>
+          </TableView>
+          <Label prefHeight="38.0" prefWidth="164.0" text="Existing Products" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
+               <ComboBox fx:id="cmbbItemType" prefHeight="42.0" prefWidth="226.0" translateX="-20.0" translateY="-55.0" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+        </GridPane>
+      </AnchorPane>
     </Tab>
-    <Tab fx:id="tab2" text="Produce">
-      <fx:include source="Tab2.fxml"/>
+    <Tab text="Produce">
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+        <Label layoutX="30.0" layoutY="29.0" text="Choose Product" />
+        <ListView layoutX="2.0" layoutY="67.0" prefHeight="377.0" prefWidth="200.0" />
+        <ComboBox layoutX="222.0" layoutY="67.0" prefHeight="54.0" prefWidth="150.0" AnchorPane.bottomAnchor="324.20000000000005" />
+        <Label layoutX="210.0" layoutY="29.0" prefHeight="28.0" prefWidth="155.0" text="Choose Quantity" />
+        <Button layoutX="222.0" layoutY="169.0" mnemonicParsing="false" onAction="#btnRecordProductionPressed" prefHeight="42.0" prefWidth="150.0" text="Record Production">
+          <font>
+            <Font size="15.0" />
+          </font>
+        </Button>
+      </AnchorPane>
     </Tab>
-    <Tab fx:id="tab3" text="Production Log">
-      <fx:include source="Tab3.fxml"/>
+    <Tab text="Production Log">
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+        <TextArea layoutX="188.0" layoutY="123.0" prefHeight="200.0" prefWidth="200.0" text="This is a text area&#10;It is centered &#10;:)" />
+      </AnchorPane>
     </Tab>
   </TabPane>
   <stylesheets>

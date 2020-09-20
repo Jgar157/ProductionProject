@@ -18,5 +18,5 @@ Jairo Garciga
 
 ## Acknowledgments
 
-W3Schools
+W3Schools <br />
 Professor Vanselow

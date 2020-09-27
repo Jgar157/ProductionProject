@@ -14,15 +14,8 @@ public class Controller {
    * Upon the creation of the screen, the combobox is updated and it's becomes editable.
    */
   public void initialize() {
+    setComboBoxes();
 
-    //This loop populates the combobox with the numbers 1-10
-    for (int i = 1; i <= 10; i++) {
-
-      cmbbItemType.getItems().add(Integer.toString(i));
-    }
-    //Auto sets the combobox to the first choice
-    cmbbItemType.getSelectionModel().selectFirst();
-    cmbbItemType.setEditable(true);
 
   }
 
@@ -34,7 +27,34 @@ public class Controller {
   private TextField txtfManufacturer;
 
   @FXML
+  private ComboBox<String> cmbbChooseQuantity;
+
+  @FXML
   private ComboBox<String> cmbbItemType;
+
+  /**
+   * The purpose of this method is set up the combo boxes
+   * instead of flooding initialize with too much code.
+   * First it does cmbbItemType then cmbbChooseQuantity.
+   */
+  public void setComboBoxes() {
+
+    //Populating cmbbItemType
+    for (ItemType item : ItemType.values()) {
+      cmbbItemType.getItems().add(item.type);
+    }
+    cmbbItemType.getSelectionModel().selectFirst();
+
+
+    //This loop populates the combobox in Product with the numbers 1-10
+    for (int i = 1; i <= 10; i++) {
+
+      cmbbChooseQuantity.getItems().add(Integer.toString(i));
+    }
+    //Auto sets the combobox to the first choice
+    cmbbChooseQuantity.getSelectionModel().selectFirst();
+    cmbbChooseQuantity.setEditable(true);
+  }
 
   /**
    * Method called when the "Add Product Pressed" Button is pressed First, it creates the

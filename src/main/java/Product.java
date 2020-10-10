@@ -6,14 +6,14 @@ public abstract class Product implements Item{
   String manufacturer;
   String name;
 
-  public Product(String name, String manufacturer, String type) {
+  public Product(String name, String manufacturer, ItemType item) {
     this.name = name;
     this.manufacturer = manufacturer;
-    this.type = type;
+    this.type = item.name();
   }
 
   public String toString() {
-    return String.format("Name: %s \nManufacturer: %s \nType: %s",
+    return String.format("Name: %s\nManufacturer: %s\nType: %s",
         this.name, this.manufacturer, this.type);
   }
 

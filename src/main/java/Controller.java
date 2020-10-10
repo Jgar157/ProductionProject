@@ -16,7 +16,6 @@ public class Controller {
   public void initialize() {
     setComboBoxes();
 
-
   }
 
   //Skeletons for txt boxes and combo boxes
@@ -41,7 +40,7 @@ public class Controller {
 
     //Populating cmbbItemType
     for (ItemType item : ItemType.values()) {
-      cmbbItemType.getItems().add(item.type);
+      cmbbItemType.getItems().add(item.name());
     }
     cmbbItemType.getSelectionModel().selectFirst();
 

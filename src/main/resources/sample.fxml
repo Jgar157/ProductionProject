@@ -44,7 +44,7 @@
               <TableColumn prefWidth="75.0" text="C2" />
             </columns>
           </TableView>
-          <Label prefHeight="38.0" prefWidth="164.0" text="Existing Products" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
+          <Label prefHeight="38.0" prefWidth="202.0" text="Existing Products" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
                <ComboBox fx:id="cmbbItemType" prefHeight="42.0" prefWidth="226.0" translateX="-20.0" translateY="-55.0" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP" />
         </GridPane>
       </AnchorPane>
@@ -64,7 +64,7 @@
     </Tab>
     <Tab text="Production Log">
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
-        <TextArea layoutX="188.0" layoutY="123.0" prefHeight="200.0" prefWidth="200.0" text="This is a text area&#10;It is centered &#10;:)" />
+        <TextArea fx:id="productionLogTxt" layoutX="155.0" layoutY="91.0" prefHeight="346.0" prefWidth="455.0" AnchorPane.bottomAnchor="90.60000000000002" AnchorPane.rightAnchor="156.19999999999993" />
       </AnchorPane>
     </Tab>
   </TabPane>

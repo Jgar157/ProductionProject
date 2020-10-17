@@ -4,8 +4,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
 public class Controller {
@@ -16,6 +18,7 @@ public class Controller {
   public void initialize() {
     setComboBoxes();
 
+    // Controller.testMultimedia(); // Tests whether the interfaces work
   }
 
   //Skeletons for txt boxes and combo boxes
@@ -30,6 +33,9 @@ public class Controller {
 
   @FXML
   private ComboBox<String> cmbbItemType;
+
+  @FXML
+  private TextArea productionLogTxt;
 
   /**
    * The purpose of this method is set up the combo boxes
@@ -53,6 +59,11 @@ public class Controller {
     //Auto sets the combobox to the first choice
     cmbbChooseQuantity.getSelectionModel().selectFirst();
     cmbbChooseQuantity.setEditable(true);
+  }
+
+  public void setProductionLogTxt() {
+    final String jdbc_driver = "org.h2.Driver";
+    final String db_url = "jdbc:h2:./res/HR;";
   }
 
   /**
@@ -132,4 +143,22 @@ public class Controller {
   public void btnRecordProductionPressed() {
     System.out.println("Record Production Pressed, pressed :)");
   }
+
+  public static void testMultimedia() {
+    AudioPlayer newAudioProduct = new AudioPlayer("DP-X1A", "Onkyo",
+        "DSD/FLAC/ALAC/WAV/AIFF/MQA/Ogg-Vorbis/MP3/AAC", "M3U/PLS/WPL");
+    Screen newScreen = new Screen("720x480", 40, 22);
+    MoviePlayer newMovieProduct = new MoviePlayer("DBPOWER MK101", "OracleProduction", newScreen,
+        MonitorType.LCD);
+    ArrayList<MultimediaControl> productList = new ArrayList<MultimediaControl>();
+    productList.add(newAudioProduct);
+    productList.add(newMovieProduct);
+    for (MultimediaControl p : productList) {
+      System.out.println(p);
+      p.play();
+      p.stop();
+      p.next();
+      p.previous();
+      }
+    }
 }

@@ -1,8 +1,10 @@
+import java.util.Date;
 
 public abstract class Product implements Item{
 
   int id;
   String type;
+  String itemCode;
   String manufacturer;
   String name;
 
@@ -10,6 +12,7 @@ public abstract class Product implements Item{
     this.name = name;
     this.manufacturer = manufacturer;
     this.type = item.name();
+    this.itemCode = item.code;
   }
 
   public String toString() {
@@ -33,4 +36,14 @@ public abstract class Product implements Item{
     return this.manufacturer;
   }
 
+  public String getItemTypeCode() {
+    return this.itemCode;
+  }
+
+}
+
+class Widget extends Product{
+  public Widget(String name, String manufacturer, ItemType item) {
+    super(name, manufacturer, item);
+  }
 }

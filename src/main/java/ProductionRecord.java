@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Date;
 
 public class ProductionRecord {
 
@@ -16,12 +16,12 @@ public class ProductionRecord {
 
   }
 
-  public ProductionRecord(int productionNumber, int productID, String serialNumber, Date date) {
+  public ProductionRecord(Product product, int count) {
 
-    this.setProductionNum(productionNumber);
-    this.setProductID(productID);
-    this.setSerialNum(serialNumber);
-    this.setProdDate(date);
+    int leadingZeros = 6 - (Integer.toString(count)).length();
+    this.setProdDate(new Date());
+    this.serialNumber = (product.getManufacturer()).substring(0,3) + product.getItemTypeCode() +
+            String.format( "%0" + leadingZeros + "d", count);
 
   }
 
@@ -95,4 +95,5 @@ public class ProductionRecord {
   public void setProdDate(Date newDate) {
     this.dateProduced = newDate;
   }
+
 }

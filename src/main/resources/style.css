@@ -22,6 +22,11 @@
       linear-gradient(from 10% 10% to 120% 120%, #D74177, #FFE98A);
 }
 
+.table-view .column-header-background .label{
+  -fx-font-size: 20px;
+  -fx-text-fill: black;
+}
+
 .table-view .column-header-background{
   -fx-background-color:
       linear-gradient(from 10% 10% to 120% 120%, #D74177, #FFE98A);

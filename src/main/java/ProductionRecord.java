@@ -20,7 +20,7 @@ public class ProductionRecord {
 
     int leadingZeros = 6 - (Integer.toString(count)).length();
     this.setProdDate(new Date());
-    this.serialNumber = (product.getManufacturer()).substring(0,3) + product.getItemTypeCode() +
+    this.serialNumber = (product.getManufacturer()).substring(0,3) + product.getItemCode() +
             String.format( "%0" + leadingZeros + "d", count);
 
   }

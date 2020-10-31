@@ -5,11 +5,14 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+
+import javafx.beans.Observable;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 public class Controller {
 
@@ -18,6 +21,8 @@ public class Controller {
    */
   public void initialize() {
     setComboBoxes();
+    setTableView();
+    populateListChooseProduct();
 
     // Controller.testMultimedia(); // Tests whether the interfaces work
   }
@@ -33,13 +38,100 @@ public class Controller {
   private ComboBox<String> cmbbChooseQuantity;
 
   @FXML
-  private ComboBox<String> cmbbItemType;
+  private ComboBox<ItemType> cmbbItemType;
 
   @FXML
-  private TableView<String> tbExistingProducts;
+  private TableView<Product> tableviewExistingProducts;
+
+  @FXML
+  private TableColumn<?, ?> tableviewID;
+
+  @FXML
+  private TableColumn<?, ?> tableviewName;
+
+  @FXML
+  private TableColumn<?, ?> tableviewType;
+
+  @FXML
+  private TableColumn<?, ?> tableviewManufacturer;
+
+  @FXML
+  private Button btnRecordProduction;
+
+  @FXML
+  ListView<Product> listChooseProduct = new ListView<>();
 
   @FXML
   private TextArea productionLogTxt;
+
+  ObservableList<Product> productLine = FXCollections.observableArrayList();
+
+  public void setTableView() {
+
+    final String jdbc_driver = "org.h2.Driver";
+    final String db_url = "jdbc:h2:./res/HR;";
+    /*
+    I had to do some editing to the HR url because it would
+    break whenever I attempted to add something to it.
+    DB_CLOSE_DELAY=-1 Was used to fix this
+     */
+
+    //  Database credentials
+    final String user = "";
+    final String pass = "";
+    Connection conn;
+    Statement stmt;
+
+    try {
+
+      // STEP 1: Register JDBC driver
+      Class.forName(jdbc_driver);
+
+      //STEP 2: Open a connection
+      conn = DriverManager.getConnection(db_url, user, pass);
+
+      stmt = conn.createStatement();
+      ResultSet rs = stmt.executeQuery("SELECT * FROM PRODUCT");
+
+      while (rs.next()) {
+
+        String tempProductName = rs.getString(2); //Grabs col 1,2,3
+        String tempTypeString = rs.getString(3);
+        String tempManufacturer = rs.getString(4);
+        ItemType tempType;
+
+        if (tempTypeString.equals(ItemType.AUDIO.code)) {
+          tempType = ItemType.AUDIO;
+        } else if (tempTypeString.equals(ItemType.AUDIO_MOBILE.code)) {
+          tempType = ItemType.AUDIO_MOBILE;
+        } else if (tempTypeString.equals(ItemType.VISUAL.code)) {
+          tempType = ItemType.VISUAL;
+        } else {
+          tempType = ItemType.VISUAL_MOBILE;
+        }
+
+        Widget tempWidget = new Widget(tempProductName, tempManufacturer, tempType);
+        productLine.add(tempWidget);
+
+      }
+
+      stmt.close();
+      conn.close();
+
+    } catch (ClassNotFoundException | SQLException e) {
+      e.printStackTrace();
+    }
+
+    tableviewName.setCellValueFactory(new PropertyValueFactory("Name"));
+    tableviewType.setCellValueFactory(new PropertyValueFactory("Type"));
+    tableviewManufacturer.setCellValueFactory(new PropertyValueFactory("Manufacturer"));
+
+    tableviewExistingProducts.setItems(productLine);
+  }
+
+  public void populateListChooseProduct() {
+    listChooseProduct.setItems(productLine);
+  }
 
   /**
    * The purpose of this method is set up the combo boxes
@@ -50,7 +142,7 @@ public class Controller {
 
     //Populating cmbbItemType
     for (ItemType item : ItemType.values()) {
-      cmbbItemType.getItems().add(item.name());
+      cmbbItemType.getItems().add(item);
     }
     cmbbItemType.getSelectionModel().selectFirst();
 
@@ -93,7 +185,8 @@ public class Controller {
     PreparedStatement preparedstmt;
     Statement stmt;
 
-    String tempType = cmbbItemType.getTypeSelector();
+    ItemType tempType = cmbbItemType.getValue();
+    String tempTypeString;
     String tempManufacturer = txtfManufacturer.getText();
     String tempProductName = txtfProductName.getText();
 
@@ -105,13 +198,17 @@ public class Controller {
       //STEP 2: Open a connection
       conn = DriverManager.getConnection(db_url, user, pass);
 
+      //Adds the new item to the tableview
+      Widget tempWidget = new Widget(tempProductName, tempManufacturer, tempType);
+      productLine.add(tempWidget);
+
       //Sql statement
       String sql = "INSERT INTO PRODUCT(type, manufacturer, name)"
           + "Values(?, ?, ?)";
 
       //Puts the corresponding String into the respective ? mark
       preparedstmt = conn.prepareStatement(sql);
-      preparedstmt.setString(1, tempType);
+      preparedstmt.setString(1, tempType.code);
       preparedstmt.setString(2, tempManufacturer);
       preparedstmt.setString(3, tempProductName);
       preparedstmt.executeUpdate();
@@ -125,11 +222,12 @@ public class Controller {
       while (rs.next()) {
 
         tempProductName = rs.getString(2); //Grabs col 1,2,3
-        tempType = rs.getString(3);
+        tempTypeString = rs.getString(3);
         tempManufacturer = rs.getString(4);
         System.out.println(tempProductName + " " + tempType + " "
             + tempManufacturer);
       }
+
 
       //Closing statement then connection
       preparedstmt.close();
@@ -139,14 +237,24 @@ public class Controller {
     } catch (ClassNotFoundException | SQLException e) {
       e.printStackTrace();
     }
+
+
+
+
   }
 
-  /**
-   * Button for the record production button.
-   */
-  public void btnRecordProductionPressed() {
-    System.out.println("Record Production Pressed, pressed :)");
+  @FXML
+  void btnRecordProductionPressed() {
+    try {
+      String amount = cmbbChooseQuantity.getValue();
+      Product tempProduct = listChooseProduct.getSelectionModel().getSelectedItem();
+      productionLogTxt.setText(tempProduct + " Amt: " + amount + "\n" + productionLogTxt.getText());
+    } catch (NullPointerException e) {
+      System.out.println("No listview item chosen");
+    }
   }
+
+
 
   public static void testMultimedia() {
     AudioPlayer newAudioProduct = new AudioPlayer("DP-X1A", "Onkyo",

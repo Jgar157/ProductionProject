@@ -1,10 +1,63 @@
 .root {
   -fx-font-size: 20px;
-  -fx-font-family: "Comic Sans MS";
-  -fx-background-color: grey;
+  -fx-font-family: "Times New Roman";
+  -fx-background-color: linear-gradient( to top right, #662D8C, #ED1E79);
+  -fx-text-fill: White;
 }
 
 .tab {
   -fx-background-color: lightgrey;
+  -fx-text-fill: White;
+
 }
 
+.text-field {
+  -fx-text-fill: White;
+  -fx-background-color:
+      linear-gradient(to right, #D74177, #FFE98A);
+}
+
+.table-view {
+  -fx-background-color:
+      linear-gradient(from 10% 10% to 120% 120%, #D74177, #FFE98A);
+}
+
+.table-view .column-header-background .label{
+  -fx-font-size: 20px;
+  -fx-text-fill: black;
+}
+
+.table-view .column-header-background{
+  -fx-background-color:
+      linear-gradient(from 10% 10% to 120% 120%, #D74177, #FFE98A);
+}
+
+.combo-box-base .list-cell{
+  -fx-text-fill: White;
+  -fx-background-color:
+      linear-gradient(from 10% 10% to 120% 120%, #D74177, #FFE98A);
+}
+
+.combo-box .text-input {
+  -fx-text-fill: White;
+  -fx-background-color:
+      linear-gradient(from 10% 10% to 120% 120%, #D74177, #FFE98A);
+}
+
+.combo-box .arrow, .combo-box .arrow-button {
+  -fx-background-color: transparent;
+}
+
+.button {
+  -fx-text-fill: White;
+  -fx-background-color: radial-gradient(radius 150%, #D74177, #FFE98A);
+}
+
+.label {
+  -fx-text-fill: White;
+  -fx-font-size: 25px;
+}
+
+.labelsWithSmallerFonts {
+  -fx-font-size: 22px;
+}

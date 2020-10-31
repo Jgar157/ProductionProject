@@ -3,7 +3,7 @@ import java.util.Date;
 public abstract class Product implements Item{
 
   int id;
-  String type;
+  ItemType type;
   String itemCode;
   String manufacturer;
   String name;
@@ -11,7 +11,7 @@ public abstract class Product implements Item{
   public Product(String name, String manufacturer, ItemType item) {
     this.name = name;
     this.manufacturer = manufacturer;
-    this.type = item.name();
+    this.type = item;
     this.itemCode = item.code;
   }
 
@@ -20,7 +20,9 @@ public abstract class Product implements Item{
         this.name, this.manufacturer, this.type);
   }
 
-  public int getId() { return this.id; }
+  public void setID(int id) { this.id = id; }
+
+  public int getID() { return this.id; }
 
   public void setName(String name) {
     this.name = name;
@@ -36,14 +38,26 @@ public abstract class Product implements Item{
     return this.manufacturer;
   }
 
-  public String getItemTypeCode() {
+  public void setType(ItemType type) {
+    this.type = type;
+  }
+
+  public ItemType getType() { return this.type; }
+
+  public void setItemCode(ItemType type) {
+    this.itemCode = type.code;
+  }
+
+  public String getItemCode() {
     return this.itemCode;
   }
 
 }
 
 class Widget extends Product{
+
   public Widget(String name, String manufacturer, ItemType item) {
     super(name, manufacturer, item);
   }
+
 }

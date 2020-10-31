@@ -38,12 +38,11 @@
           <Label text="Manufacturer" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP" />
           <Label alignment="CENTER" prefHeight="28.0" prefWidth="122.0" styleClass="labelsWithSmallerFonts" text="Item Type" translateY="-50.0" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="TOP" />
           <Button mnemonicParsing="false" onAction="#btnAddProductPressed" prefHeight="42.0" prefWidth="146.0" text="Add Product" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-          <TableView fx:id="tbExistingProducts" prefHeight="239.0" prefWidth="373.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+          <TableView fx:id="tableviewExistingProducts" prefHeight="239.0" prefWidth="373.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
             <columns>
-              <TableColumn prefWidth="46.39996260404587" text="ID" />
-              <TableColumn prefWidth="120.00000381469727" text="Name" />
-                     <TableColumn prefWidth="80.79998779296875" text="Type" />
-                     <TableColumn prefWidth="154.39999694824218" text="Manufacturer" />
+              <TableColumn fx:id="tableviewName" prefWidth="120.00000381469727" text="Name" />
+                     <TableColumn fx:id="tableviewType" prefWidth="109.0" text="Type" />
+                     <TableColumn fx:id="tableviewManufacturer" prefWidth="172.0" text="Manufacturer" />
             </columns>
           </TableView>
           <Label alignment="CENTER" prefHeight="38.0" prefWidth="241.0" text="Existing Products" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
@@ -53,15 +52,15 @@
     </Tab>
     <Tab text="Produce">
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
-        <Label layoutX="30.0" layoutY="29.0" styleClass="labelsWithSmallerFonts" text="Choose Product" />
-        <ListView layoutX="2.0" layoutY="67.0" prefHeight="377.0" prefWidth="200.0" />
-        <ComboBox fx:id="cmbbChooseQuantity" layoutX="222.0" layoutY="67.0" prefHeight="54.0" prefWidth="150.0" AnchorPane.bottomAnchor="406.6" />
-        <Button layoutX="222.0" layoutY="234.0" mnemonicParsing="false" onAction="#btnRecordProductionPressed" prefHeight="42.0" prefWidth="150.0" text="Record Production">
+        <Label layoutX="114.0" layoutY="30.0" styleClass="labelsWithSmallerFonts" text="Choose Product" />
+        <ListView fx:id="listChooseProduct" layoutX="2.0" layoutY="67.0" prefHeight="392.0" prefWidth="363.0" />
+        <ComboBox fx:id="cmbbChooseQuantity" layoutX="393.0" layoutY="67.0" prefHeight="54.0" prefWidth="150.0" AnchorPane.bottomAnchor="407.0" />
+        <Button fx:id="btnRecordProduction" layoutX="393.0" layoutY="235.0" mnemonicParsing="false" onAction="#btnRecordProductionPressed" prefHeight="42.0" prefWidth="150.0" text="Record Production">
           <font>
             <Font size="15.0" />
           </font>
         </Button>
-        <Label id="produceChoose" layoutX="219.0" layoutY="30.0" prefHeight="28.0" prefWidth="155.0" styleClass="labelsWithSmallerFonts" text="Choose Quantity" />
+        <Label id="produceChoose" layoutX="393.0" layoutY="28.0" prefHeight="28.0" prefWidth="155.0" styleClass="labelsWithSmallerFonts" text="Choose Quantity" />
       </AnchorPane>
     </Tab>
     <Tab text="Production Log">

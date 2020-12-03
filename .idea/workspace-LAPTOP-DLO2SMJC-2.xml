@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="aff843c0-902f-478b-8928-b8d3143fd019" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/HR.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/res/HR.mv.db" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DarkyenusTimeTracker">
+    <option name="totalTimeSeconds" value="21530" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="ProductionProject" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaFXApplication" />
+        <option value="FxmlFile" />
+        <option value="CSS File" />
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Future" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/Jgar157/ProductionProject" />
+      </set>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.2\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1geePpHBTeQIAF6Qj396CGMBDeb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="database.data.extractors.current.export.id" value="Comma-separated (CSV)_id" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="SQL Dialects" />
+    <property name="show.unlinked.gradle.project.popup" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jairo\OneDrive - Florida Gulf Coast University\Year 2\Fall 2020\COP3003\ProductionProject\res" />
+      <recent name="C:\Users\jairo\OneDrive - Florida Gulf Coast University\Year 2\Fall 2020\COP3003\ProductionProject\src\main\java" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="ProductionProject.main" />
+      <option name="VM_PARAMETERS" value="--module-path=&quot;C:\Users\jairo\OneDrive\Desktop\COP 3003\javafx-sdk-11.0.2\lib&quot; --add-modules=javafx.controls,javafx.fxml,javafx.base,javafx.media,javafx.graphics,javafx.swing,javafx.web " />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="console.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$APPLICATION_CONFIG_DIR$/consoles/db/7c27f08f-6373-4871-bbe7-7173c515ac3e/console.sql" />
+      <script-mode>FILE</script-mode>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Database Script.console.sql" />
+        <item itemvalue="Database Script.console.sql" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Database Script.console.sql" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="aff843c0-902f-478b-8928-b8d3143fd019" name="Default Changelist" comment="" />
+      <created>1598479472178</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598479472178</updated>
+      <workItem from="1598479475552" duration="13585000" />
+      <workItem from="1599081927459" duration="7888000" />
+      <workItem from="1599189484735" duration="707000" />
+      <workItem from="1599612036260" duration="121000" />
+      <workItem from="1599683591992" duration="3202000" />
+      <workItem from="1600121100572" duration="1632000" />
+      <workItem from="1600289094028" duration="110000" />
+      <workItem from="1600538538349" duration="5265000" />
+      <workItem from="1600556431343" duration="960000" />
+      <workItem from="1600557406604" duration="3780000" />
+      <workItem from="1600561498366" duration="6093000" />
+      <workItem from="1600894659879" duration="40000" />
+      <workItem from="1601167176614" duration="6945000" />
+      <workItem from="1601501846626" duration="87000" />
+      <workItem from="1601525300084" duration="15000" />
+      <workItem from="1601525329142" duration="3255000" />
+      <workItem from="1601690960986" duration="526000" />
+      <workItem from="1602367125209" duration="3874000" />
+      <workItem from="1602371026032" duration="98000" />
+      <workItem from="1602709771539" duration="377000" />
+      <workItem from="1602710178008" duration="858000" />
+      <workItem from="1602963386280" duration="8065000" />
+      <workItem from="1603420492126" duration="6304000" />
+      <workItem from="1603492986013" duration="4239000" />
+      <workItem from="1603519216976" duration="580000" />
+      <workItem from="1603558703798" duration="1789000" />
+      <workItem from="1603576903157" duration="724000" />
+      <workItem from="1603917328341" duration="969000" />
+      <workItem from="1604155578512" duration="11269000" />
+      <workItem from="1604177439784" duration="4030000" />
+      <workItem from="1604181541539" duration="4188000" />
+      <workItem from="1604187284567" duration="147000" />
+    </task>
+    <task id="LOCAL-00001" summary="Fixing style">
+      <created>1598581775859</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1598581775859</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Fixing style">
+      <created>1598581995933</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1598581995933</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Updating GUI">
+      <created>1599087078768</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1599087078768</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Gui clean-up with 2 new buttons (they can be pressed!)">
+      <created>1599171324716</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1599171324716</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Updating GUI">
+      <created>1599189493773</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1599189493773</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Database integration into program">
+      <created>1600566065334</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1600566065334</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Database integration into program">
+      <created>1600566771671</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1600566771671</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Added uml diagram">
+      <created>1600568775371</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1600568775371</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Added Enum, abstract class, and interface.">
+      <created>1601174241922</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1601174241922</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Added ProductionRecord and updated the Css so that it is prettier">
+      <created>1602974939186</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1602974939186</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Merge remote-tracking branch 'origin/master' into master">
+      <created>1602974966155</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1602974966155</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Merge remote-tracking branch 'origin/master' into master">
+      <created>1603560631649</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1603560631649</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Added functionality to the tableview, listview, and production log tab.&#10;This was by far one of the most difficult parts of this project.&#10;Luckily, I now am more skilled regarding java.f">
+      <created>1604185474889</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1604185474889</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="First Commit" />
+    <MESSAGE value="Fixed some issues with style" />
+    <MESSAGE value="Fixing style" />
+    <MESSAGE value="Gui clean-up with 2 new buttons (they can be pressed!)" />
+    <MESSAGE value="Updating GUI" />
+    <MESSAGE value="Database integration into program" />
+    <MESSAGE value="Added uml diagram" />
+    <MESSAGE value="Added Enum, abstract class, and interface." />
+    <MESSAGE value="Added ProductionRecord and updated the Css so that it is prettier" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master' into master" />
+    <MESSAGE value="Added functionality to the tableview, listview, and production log tab.&#10;This was by far one of the most difficult parts of this project.&#10;Luckily, I now am more skilled regarding java.f" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added functionality to the tableview, listview, and production log tab.&#10;This was by far one of the most difficult parts of this project.&#10;Luckily, I now am more skilled regarding java.f" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="516" y="256" key="#Notifications" timestamp="1598582245786">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="516" y="256" key="#Notifications/0.0.1536.864@0.0.1536.864" timestamp="1598582245786" />
+    <state x="306" y="9" key="#Project_Structure" timestamp="1604161207924">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="245" y="7" key="#Project_Structure/0.0.1536.864@0.0.1536.864" timestamp="1599687344635" />
+    <state x="306" y="9" key="#Project_Structure/0.0.1920.1080/-1920.0.1536.864@0.0.1920.1080" timestamp="1604161207924" />
+    <state x="258" y="343" key="#SQL_Dialects" timestamp="1604175894361">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="206" y="274" key="#SQL_Dialects/0.0.1536.864@0.0.1536.864" timestamp="1599688725984" />
+    <state x="258" y="343" key="#SQL_Dialects/0.0.1920.1080/-1920.0.1536.864@0.0.1920.1080" timestamp="1604175894361" />
+    <state x="469" y="168" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604178435649">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="375" y="134" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864@0.0.1536.864" timestamp="1602367363814" />
+    <state x="469" y="168" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/-1920.0.1536.864@0.0.1920.1080" timestamp="1604178435649" />
+    <state x="520" y="234" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600121416804">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="520" y="234" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.864@0.0.1536.864" timestamp="1600121416804" />
+    <state x="544" y="137" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1598481883518">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="544" y="137" key="#com.intellij.ide.macro.MacrosDialog/0.0.1536.864@0.0.1536.864" timestamp="1598481883518" />
+    <state x="713" y="174" key="#com.intellij.ide.util.MemberChooser" timestamp="1604180257213">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="570" y="139" key="#com.intellij.ide.util.MemberChooser/0.0.1536.864@0.0.1536.864" timestamp="1602368234110" />
+    <state x="713" y="174" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080/-1920.0.1536.864@0.0.1920.1080" timestamp="1604180257213" />
+    <state x="619" y="224" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604184077419">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="495" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.864@0.0.1536.864" timestamp="1599170216426" />
+    <state x="619" y="224" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080/-1920.0.1536.864@0.0.1920.1080" timestamp="1604184077419" />
+    <state x="380" y="108" key="CommitChangelistDialog2" timestamp="1604185469796">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="380" y="108" key="CommitChangelistDialog2/0.0.1920.1080/-1920.0.1536.864@0.0.1920.1080" timestamp="1604185469796" />
+    <state x="184" y="90" key="DiffContextDialog" timestamp="1604178204719">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="184" y="90" key="DiffContextDialog/0.0.1920.1080/-1920.0.1536.864@0.0.1920.1080" timestamp="1604178204719" />
+    <state x="303" y="134" key="FileChooserDialogImpl" timestamp="1603919824197">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="757" y="216" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1601501924807" />
+    <state x="303" y="134" key="FileChooserDialogImpl/0.0.1920.1080/-1920.0.1536.864@0.0.1920.1080" timestamp="1603919824197" />
+    <state width="1493" height="194" key="GridCell.Tab.0.bottom" timestamp="1604244496675">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="194" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1604244496675" />
+    <state width="1877" height="191" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1920.0.1536.864@0.0.1920.1080" timestamp="1604185411255" />
+    <state width="1493" height="194" key="GridCell.Tab.0.center" timestamp="1604244496675">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="194" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1604244496675" />
+    <state width="1877" height="191" key="GridCell.Tab.0.center/0.0.1920.1080/-1920.0.1536.864@0.0.1920.1080" timestamp="1604185411255" />
+    <state width="1493" height="194" key="GridCell.Tab.0.left" timestamp="1604244496675">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="194" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1604244496675" />
+    <state width="1877" height="191" key="GridCell.Tab.0.left/0.0.1920.1080/-1920.0.1536.864@0.0.1920.1080" timestamp="1604185411255" />
+    <state width="1493" height="194" key="GridCell.Tab.0.right" timestamp="1604244496675">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="194" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1604244496675" />
+    <state width="1877" height="191" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.0.1536.864@0.0.1920.1080" timestamp="1604185411255" />
+    <state width="1877" height="363" key="GridCell.Tab.1.bottom" timestamp="1604177179043">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1493" height="277" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1600122733893" />
+    <state width="1877" height="363" key="GridCell.Tab.1.bottom/0.0.1920.1080/-1920.0.1536.864@0.0.1920.1080" timestamp="1604177179043" />
+    <state width="1877" height="363" key="GridCell.Tab.1.center" timestamp="1604177179042">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1493" height="277" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1600122733893" />
+    <state width="1877" height="363" key="GridCell.Tab.1.center/0.0.1920.1080/-1920.0.1536.864@0.0.1920.1080" timestamp="1604177179042" />
+    <state width="1877" height="363" key="GridCell.Tab.1.left" timestamp="1604177179042">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1493" height="277" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1600122733893" />
+    <state width="1877" height="363" key="GridCell.Tab.1.left/0.0.1920.1080/-1920.0.1536.864@0.0.1920.1080" timestamp="1604177179042" />
+    <state width="1877" height="363" key="GridCell.Tab.1.right" timestamp="1604177179042">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1493" height="277" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1600122733893" />
+    <state width="1877" height="363" key="GridCell.Tab.1.right/0.0.1920.1080/-1920.0.1536.864@0.0.1920.1080" timestamp="1604177179042" />
+    <state width="189" height="457" key="HiddenNamespacesPopup" timestamp="1599144750241">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="189" height="457" key="HiddenNamespacesPopup/0.0.1536.864@0.0.1536.864" timestamp="1599144750241" />
+    <state x="345" y="175" key="IDE.errors.dialog" timestamp="1598582524448">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="345" y="175" key="IDE.errors.dialog/0.0.1536.864@0.0.1536.864" timestamp="1598582524448" />
+    <state x="346" y="137" width="746" height="590" key="NewModule_or_Project.wizard" timestamp="1601501930387">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="346" y="137" width="746" height="590" key="NewModule_or_Project.wizard/0.0.1536.864@0.0.1536.864" timestamp="1601501930387" />
+    <state x="517" y="242" key="RollbackChangesDialog" timestamp="1604179192304">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="517" y="242" key="RollbackChangesDialog/0.0.1920.1080/-1920.0.1536.864@0.0.1920.1080" timestamp="1604179192304" />
+    <state x="668" y="39" key="SettingsEditor" timestamp="1604176840842">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="534" y="31" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1602710333846" />
+    <state x="668" y="39" key="SettingsEditor/0.0.1920.1080/-1920.0.1536.864@0.0.1920.1080" timestamp="1604176840842" />
+    <state x="446" y="206" key="Vcs.Push.Dialog.v2" timestamp="1604185508301">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="357" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1602974975105" />
+    <state x="446" y="206" key="Vcs.Push.Dialog.v2/0.0.1920.1080/-1920.0.1536.864@0.0.1920.1080" timestamp="1604185508301" />
+    <state x="647" y="320" width="312" height="243" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1600541226657">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="647" y="320" width="312" height="243" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1536.864@0.0.1536.864" timestamp="1600541226657" />
+    <state x="349" y="87" key="com.intellij.database.dbimport.ImportDialog" timestamp="1600539494137">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="349" y="87" key="com.intellij.database.dbimport.ImportDialog/0.0.1536.864@0.0.1536.864" timestamp="1600539494137" />
+    <state x="803" y="313" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1604158360537">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="803" y="313" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1920.1080/-1920.0.1536.864@0.0.1920.1080" timestamp="1604158360537" />
+    <state x="728" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604178231878">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="582" y="346" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.864@0.0.1536.864" timestamp="1599171193485" />
+    <state x="728" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080/-1920.0.1536.864@0.0.1920.1080" timestamp="1604178231878" />
+    <state x="305" y="168" width="925" height="628" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1600538746110">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="305" y="168" width="925" height="628" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.864@0.0.1536.864" timestamp="1600538746110" />
+    <state x="0" y="101" width="860" height="849" key="dock-window-1" timestamp="1600568765630">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="0" y="101" width="860" height="849" key="dock-window-1/0.0.1536.864@0.0.1536.864" timestamp="1600568765630" />
+    <state x="523" y="68" key="new project wizard" timestamp="1603919812058">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="418" y="54" key="new project wizard/0.0.1536.864@0.0.1536.864" timestamp="1601690978107" />
+    <state x="523" y="68" key="new project wizard/0.0.1920.1080/-1920.0.1536.864@0.0.1920.1080" timestamp="1603919812058" />
+    <state x="612" y="243" width="609" height="406" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1602709831758">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="612" y="243" width="609" height="406" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1536.864@0.0.1536.864" timestamp="1602709831758" />
+    <state x="421" y="199" key="run.anything.popup" timestamp="1601168592423">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="421" y="199" key="run.anything.popup/0.0.1536.864@0.0.1536.864" timestamp="1601168592423" />
+    <state x="539" y="226" width="840" height="848" key="search.everywhere.popup" timestamp="1604173527083">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1600563427062" />
+    <state x="539" y="226" width="840" height="848" key="search.everywhere.popup/0.0.1920.1080/-1920.0.1536.864@0.0.1920.1080" timestamp="1604173527083" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ClassNotFoundException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

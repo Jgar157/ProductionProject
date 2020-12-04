@@ -1,6 +1,7 @@
 /**
  * Screen contains several variables that represent attributes
  * of a typical electronic screen such as resolution and refresh rate.
+ * @author Jairo Garciga
  */
 public class Screen implements ScreenSpec{
 

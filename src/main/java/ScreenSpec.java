@@ -1,6 +1,6 @@
 /**
- * Author: Jairo Garciga
  * Interface for attributes of a screen
+ * @author Jairo Garciga
  */
 
 public interface ScreenSpec {

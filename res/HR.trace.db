@@ -4,3 +4,21 @@ SELECT * FROM PRODUCT [42102-199]
 2020-12-02 21:25:13 jdbc[4]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PRODUCT" not found; SQL statement:
 SELECT NAME FROM PRODUCT WHERE ID=? [42102-199]
+2020-12-03 18:49:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PRODUCT" not found; SQL statement:
+SELECT * FROM PRODUCT [42102-199]
+2020-12-03 18:49:14 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PRODUCT" not found; SQL statement:
+SELECT NAME FROM PRODUCT WHERE ID=? [42102-199]
+2020-12-03 18:51:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PRODUCT" not found; SQL statement:
+SELECT * FROM PRODUCT [42102-199]
+2020-12-03 18:51:10 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PRODUCT" not found; SQL statement:
+SELECT NAME FROM PRODUCT WHERE ID=? [42102-199]
+2020-12-03 18:57:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PRODUCT" not found; SQL statement:
+SELECT * FROM PRODUCT [42102-199]
+2020-12-03 18:57:28 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PRODUCT" not found; SQL statement:
+SELECT NAME FROM PRODUCT WHERE ID=? [42102-199]

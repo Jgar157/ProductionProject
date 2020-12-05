@@ -1,6 +1,5 @@
 import java.io.FileInputStream;
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -413,7 +412,7 @@ public class Controller {
         ProductionRecord tempProductionRecord = new ProductionRecord((rs.getInt(2)));
         tempProductionRecord.setProductionNum(rs.getInt(1));
         tempProductionRecord.setSerialNum(rs.getString(3));
-        tempProductionRecord.setProdDate(new Date(rs.getDate(4).getTime()));
+        tempProductionRecord.setProdDate(rs.getTimestamp(4));
         ProductionRecord.updateTypeTotals(tempProductionRecord.getSerialNum().substring(3, 5));
         // Necessary to update typeTotals to make sure future productionRecords
         // match with the proper serialNum

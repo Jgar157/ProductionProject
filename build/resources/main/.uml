@@ -3,29 +3,63 @@
   <ID>JAVA</ID>
   <OriginalElement />
   <nodes>
-    <node x="346.0" y="450.0">com</node>
-    <node x="205.0" y="300.0">images</node>
-    <node x="261.0" y="225.0">netscape</node>
-    <node x="189.0" y="375.0">junit</node>
-    <node x="0.0" y="525.0">org</node>
-    <node x="0.0" y="75.0">toolbarButtonGraphics</node>
-    <node x="0.0" y="450.0">Controller</node>
-    <node x="165.0" y="525.0">sun</node>
-    <node x="330.0" y="525.0">jdk</node>
-    <node x="0.0" y="300.0">META-INF</node>
-    <node x="0.0" y="225.0">groovyjarjarasm</node>
-    <node x="173.0" y="450.0">java</node>
-    <node x="394.0" y="300.0">groovy</node>
-    <node x="370.0" y="375.0">javax</node>
-    <node x="0.0" y="150.0">groovyjarjarpicocli</node>
-    <node x="0.0" y="0.0">groovyjarjarcommonscli</node>
-    <node x="0.0" y="375.0">javafx</node>
-    <node x="293.0" y="150.0">groovyjarjarantlr</node>
-    <node x="0.0" y="600.0">Main</node>
+    <node x="197.0" y="465.0">MonitorType</node>
+    <node x="168.0" y="160.0">AudioPlayer</node>
+    <node x="324.0" y="160.0">Widget</node>
+    <node x="218.0" y="80.0">Product</node>
+    <node x="0.0" y="540.0">Employee</node>
+    <node x="157.0" y="540.0">Launcher</node>
+    <node x="253.0" y="390.0">ProductionRecord</node>
+    <node x="0.0" y="390.0">idea-injected-traits</node>
+    <node x="0.0" y="80.0">MultimediaControl</node>
+    <node x="314.0" y="540.0">ItemType</node>
+    <node x="12.0" y="160.0">MoviePlayer</node>
+    <node x="230.0" y="0.0">Item</node>
+    <node x="173.0" y="235.0">IdeaPrintProjectSettings</node>
+    <node x="0.0" y="465.0">TestingModule</node>
+    <node x="378.0" y="465.0">Controller</node>
+    <node x="0.0" y="235.0">ScreenSpec</node>
+    <node x="16.0" y="315.0">Screen</node>
+    <node x="471.0" y="540.0">Main</node>
   </nodes>
   <notes />
-  <edges />
-  <settings layout="Hierarchic Group" zoom="1.0" x="269.0" y="315.0" />
+  <edges>
+    <edge source="MoviePlayer" target="Product">
+      <point x="34.0" y="-15.0" />
+      <point x="114.0" y="140.0" />
+      <point x="235.33333333333334" y="140.0" />
+      <point x="-34.66666666666666" y="15.0" />
+    </edge>
+    <edge source="AudioPlayer" target="Product">
+      <point x="34.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="Screen" target="ScreenSpec">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="AudioPlayer" target="MultimediaControl">
+      <point x="-34.0" y="-15.0" />
+      <point x="202.0" y="130.0" />
+      <point x="138.0" y="130.0" />
+      <point x="46.0" y="15.0" />
+    </edge>
+    <edge source="MoviePlayer" target="MultimediaControl">
+      <point x="-34.0" y="-15.0" />
+      <point x="-46.0" y="15.0" />
+    </edge>
+    <edge source="Widget" target="Product">
+      <point x="0.0" y="-15.0" />
+      <point x="372.0" y="140.0" />
+      <point x="304.66666666666663" y="140.0" />
+      <point x="34.66666666666663" y="15.0" />
+    </edge>
+    <edge source="Product" target="Item">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.8016786570743404" x="616.5678828410244" y="372.30182470834586" />
   <SelectedNodes />
   <Categories />
   <SCOPE>All</SCOPE>

@@ -4,6 +4,7 @@ import java.util.Date;
  * ProductionRecord keeps track of the types of Products that have been produced.
  * It keeps track of their time, the total amount of each type produced, the product name,
  * and it's ID.
+ *
  * @author Jairo Garciga
  */
 public class ProductionRecord {
@@ -23,6 +24,7 @@ public class ProductionRecord {
    * This default constructor takes care of the quick instantiation of productionRecords
    * The type count has to be updated when this is called
    * since it does not update the itemType totals.
+   *
    * @param productID The id of the product
    */
   public ProductionRecord(int productID) {
@@ -37,6 +39,7 @@ public class ProductionRecord {
   /**
    * This constructor takes care of several things, it sets all the main variables,
    * updates the totals for the types, and finally sets the serial number.
+   *
    * @param product The product which a production record will be made of
    */
   public ProductionRecord(Product product) {
@@ -49,39 +52,45 @@ public class ProductionRecord {
     int leadingZeros = 6 - (Integer.toString(productionNumber)).length();
 
 
-    this.serialNumber = (product.getManufacturer()).substring(0,3) + product.getItemCode() +
-            String.format( "%0" + leadingZeros + "d", getTypeTotal(product.getType()));
+    this.serialNumber = (product.getManufacturer()).substring(0, 3) + product.getItemCode()
+            + String.format("%0" + leadingZeros + "d", getTypeTotal(product.getType()));
 
   }
 
   /**
    * This method is primarily used as output onto the productionLog.
    * It sets a string for the productionNum, productName, serialNum, and prodDate.
-   * @return  The string format of a productionRecord object
+   *
+   * @return The string format of a productionRecord object
    */
   public String toString() {
 
     return String.format("Prod. Num: %s Product Name: %s Serial Num: %s Date: %s \n",
-        getProductionNum(), getProductName(), getSerialNum(), getProdDate());
+            getProductionNum(), getProductName(), getSerialNum(), getProdDate());
 
   }
 
   /**
-   * Grabs the productName of the object
-   * @return  The productName
+   * Grabs the productName of the object.
+   *
+   * @return The productName
    */
   public String getProductName() {
     return this.productName;
   }
 
   /**
-   * Sets the productName
-   * @param productName The new productName
+   * Sets the productName.
+   *
+   * @param productName The new productName.
    */
-  public void setProductName(String productName) { this.productName = productName; }
+  public void setProductName(String productName) {
+    this.productName = productName;
+  }
 
   /**
-   * Gets the production number field
+   * Gets the production number field.
+   *
    * @return productionNumber
    */
   public int getProductionNum() {
@@ -89,7 +98,8 @@ public class ProductionRecord {
   }
 
   /**
-   * Gets the productID field and outputs
+   * Gets the productID field and outputs.
+   *
    * @return productID
    */
   public int getProductID() {
@@ -97,7 +107,8 @@ public class ProductionRecord {
   }
 
   /**
-   * Gets the serialNumber field and outputs
+   * Gets the serialNumber field and outputs.
+   *
    * @return serialNumber
    */
   public String getSerialNum() {
@@ -105,7 +116,8 @@ public class ProductionRecord {
   }
 
   /**
-   * Gets the dateProduced field and outputs
+   * Gets the dateProduced field and outputs.
+   *
    * @return dateProduced
    */
   public Date getProdDate() {
@@ -113,7 +125,8 @@ public class ProductionRecord {
   }
 
   /**
-   * Sets productionNumber field to number
+   * Sets productionNumber field to number.
+   *
    * @param number The new product number
    */
   public void setProductionNum(int number) {
@@ -121,7 +134,8 @@ public class ProductionRecord {
   }
 
   /**
-   * Sets the productID field to number
+   * Sets the productID field to number.
+   *
    * @param number The new productID
    */
   public void setProductID(int number) {
@@ -129,15 +143,17 @@ public class ProductionRecord {
   }
 
   /**
-   * Sets the serialNumber field to number
+   * Sets the serialNumber field to number.
+   *
    * @param number The new serialNumber
    */
-  public void setSerialNum(String number){
+  public void setSerialNum(String number) {
     this.serialNumber = number;
   }
 
   /**
-   * Sets the dateProduced to a new date
+   * Sets the dateProduced to a new date.
+   *
    * @param newDate The new date
    */
   public void setProdDate(Date newDate) {
@@ -145,27 +161,29 @@ public class ProductionRecord {
   }
 
   /**
-   * Takes the code parameter and updates the respective itemType total
-   * @param code  The ItemType to have it's total updated
+   * Takes the code parameter and updates the respective itemType total.
+   *
+   * @param code The ItemType to have it's total updated
    */
   public static void updateTypeTotals(String code) {
 
     if (code.equals(ItemType.AUDIO.code)) {
       totalAU++;
     } else if (code.equals(ItemType.AUDIO_MOBILE.code)) {
-      totalAM ++;
+      totalAM++;
     } else if (code.equals(ItemType.VISUAL.code)) {
-      totalVI ++;
+      totalVI++;
     } else {
-      totalVM ++;
+      totalVM++;
     }
 
   }
 
   /**
-   * Takes the ItemType parameter and returns the respective total
-   * @param type  The ItemType input
-   * @return  The respective ItemType amount
+   * Takes the ItemType parameter and returns the respective total.
+   *
+   * @param type The ItemType input
+   * @return The respective ItemType amount
    */
   public static int getTypeTotal(ItemType type) {
 
@@ -182,9 +200,10 @@ public class ProductionRecord {
   }
 
   /**
-   * Takes the code parameter and returns the corresponding ItemType
-   * @param code  The String representation of an ItemType
-   * @return  The corresponding ItemType to the code
+   * Takes the code parameter and returns the corresponding ItemType.
+   *
+   * @param code The String representation of an ItemType
+   * @return The corresponding ItemType to the code
    */
   public static ItemType findType(String code) {
 

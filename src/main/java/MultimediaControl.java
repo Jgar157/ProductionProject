@@ -1,5 +1,5 @@
 /**
- * Interface for classes that have some form of multimedia
+ * Interface for classes that have some form of multimedia.
  * @author Jairo Garciga
  */
 public interface MultimediaControl {

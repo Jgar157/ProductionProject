@@ -27,8 +27,8 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":9};
-var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10};
+var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -191,7 +191,7 @@ extends java.lang.Object</pre>
 </a>
 <h3>Method Summary</h3>
 <table class="memberSummary">
-<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t1" class="tableTab"><span><a href="javascript:show(1);">Static Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colSecond" scope="col">Method</th>
@@ -215,14 +215,14 @@ extends java.lang.Object</pre>
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#btnAddProductPressed()">btnAddProductPressed</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Method called when the "Add Product Pressed" Button is pressed</div>
+<div class="block">Method called when the "Add Product Pressed" Button is pressed.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#btnRecordProductionPressed()">btnRecordProductionPressed</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Method called when "Record Production" pressed</div>
+<div class="block">Method called when "Record Production" pressed.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
@@ -275,7 +275,7 @@ extends java.lang.Object</pre>
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#loadProductionLog()">loadProductionLog</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Connects to database and creates productionRecord objects from PRODUCTIONRECORD
+<div class="block">Connects to database and creates productionRecord objects from ProductionRecord
  In order to calculate the right type totals updateTypeTotals is called.</div>
 </td>
 </tr>
@@ -284,14 +284,14 @@ extends java.lang.Object</pre>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#loadProductList()">loadProductList</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Connects to database and creates products from PRODUCT table
- Then adds these created products to the productLine</div>
+ Then adds these created products to the productLine.</div>
 </td>
 </tr>
 <tr id="i12" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#populateListChooseProduct()">populateListChooseProduct</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Sets the listViewProducts to the productLine</div>
+<div class="block">Sets the listViewProducts to the productLine.</div>
 </td>
 </tr>
 <tr id="i13" class="rowColor">
@@ -299,7 +299,7 @@ extends java.lang.Object</pre>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#reverseString(java.lang.String)">reverseString</a></span>&#8203;(java.lang.String&nbsp;pw)</code></th>
 <td class="colLast">
 <div class="block">Recursive method to reverse the password String, could theoretically
- be used for other Strings too</div>
+ be used for other Strings too.</div>
 </td>
 </tr>
 <tr id="i14" class="altColor">
@@ -323,13 +323,6 @@ extends java.lang.Object</pre>
 <td class="colLast">
 <div class="block">Loops over productRecord, and adds the string form of each object to
  the productionLogTxt box in production log tab.</div>
-</td>
-</tr>
-<tr id="i17" class="rowColor">
-<td class="colFirst"><code>static void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#testMultimedia()">testMultimedia</a></span>()</code></th>
-<td class="colLast">
-<div class="block">Testing method to see if the child classes for Product work.</div>
 </td>
 </tr>
 </table>
@@ -423,7 +416,7 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>populateListChooseProduct</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;populateListChooseProduct()</pre>
-<div class="block">Sets the listViewProducts to the productLine</div>
+<div class="block">Sets the listViewProducts to the productLine.</div>
 </li>
 </ul>
 <a id="btnAddProductPressed()">
@@ -433,7 +426,7 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>btnAddProductPressed</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;btnAddProductPressed()</pre>
-<div class="block">Method called when the "Add Product Pressed" Button is pressed</div>
+<div class="block">Method called when the "Add Product Pressed" Button is pressed.</div>
 </li>
 </ul>
 <a id="btnRecordProductionPressed()">
@@ -443,7 +436,7 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>btnRecordProductionPressed</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;btnRecordProductionPressed()</pre>
-<div class="block">Method called when "Record Production" pressed</div>
+<div class="block">Method called when "Record Production" pressed.</div>
 </li>
 </ul>
 <a id="enterEmployee()">
@@ -505,7 +498,7 @@ extends java.lang.Object</pre>
 <h4>loadProductList</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;loadProductList()</pre>
 <div class="block">Connects to database and creates products from PRODUCT table
- Then adds these created products to the productLine</div>
+ Then adds these created products to the productLine.</div>
 </li>
 </ul>
 <a id="loadProductionLog()">
@@ -515,9 +508,9 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>loadProductionLog</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;loadProductionLog()</pre>
-<div class="block">Connects to database and creates productionRecord objects from PRODUCTIONRECORD
+<div class="block">Connects to database and creates productionRecord objects from ProductionRecord
  In order to calculate the right type totals updateTypeTotals is called.
- Finally adds the new productionRecord objects into productionLog</div>
+ Finally adds the new productionRecord objects into productionLog.</div>
 </li>
 </ul>
 <a id="showProduction()">
@@ -549,7 +542,7 @@ extends java.lang.Object</pre>
 <h4>reverseString</h4>
 <pre class="methodSignature">public&nbsp;java.lang.String&nbsp;reverseString&#8203;(java.lang.String&nbsp;pw)</pre>
 <div class="block">Recursive method to reverse the password String, could theoretically
- be used for other Strings too</div>
+ be used for other Strings too.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>pw</code> - The string representing the reversed password in properties</dd>
@@ -584,7 +577,7 @@ extends java.lang.Object</pre>
 <a id="setLabelErrorMessage(java.lang.String)">
 <!--   -->
 </a>
-<ul class="blockList">
+<ul class="blockListLast">
 <li class="blockList">
 <h4>setLabelErrorMessage</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setLabelErrorMessage&#8203;(java.lang.String&nbsp;message)</pre>
@@ -593,16 +586,6 @@ extends java.lang.Object</pre>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>message</code> - The error message</dd>
 </dl>
-</li>
-</ul>
-<a id="testMultimedia()">
-<!--   -->
-</a>
-<ul class="blockListLast">
-<li class="blockList">
-<h4>testMultimedia</h4>
-<pre class="methodSignature">public static&nbsp;void&nbsp;testMultimedia()</pre>
-<div class="block">Testing method to see if the child classes for Product work.</div>
 </li>
 </ul>
 </li>

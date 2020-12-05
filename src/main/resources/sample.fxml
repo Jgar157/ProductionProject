@@ -59,13 +59,18 @@
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
         <Label layoutX="114.0" layoutY="16.0" styleClass="labelsWithSmallerFonts" text="Choose Product" />
         <ListView fx:id="listViewProducts" layoutX="2.0" layoutY="44.0" prefHeight="485.0" prefWidth="363.0" />
-        <ComboBox fx:id="cmbbChooseQuantity" layoutX="393.0" layoutY="67.0" prefHeight="54.0" prefWidth="150.0" AnchorPane.bottomAnchor="407.0" />
-        <Button fx:id="btnRecordProduction" layoutX="396.0" layoutY="235.0" mnemonicParsing="false" onAction="#btnRecordProductionPressed" prefHeight="42.0" prefWidth="150.0" text="Record Production">
+        <ComboBox fx:id="cmbbChooseQuantity" layoutX="384.0" layoutY="44.0" prefHeight="54.0" prefWidth="150.0" AnchorPane.bottomAnchor="431.0" />
+        <Button fx:id="btnRecordProduction" layoutX="579.0" layoutY="50.0" mnemonicParsing="false" onAction="#btnRecordProductionPressed" prefHeight="42.0" prefWidth="150.0" text="Record Production">
           <font>
             <Font size="15.0" />
           </font>
         </Button>
-        <Label id="produceChoose" layoutX="393.0" layoutY="28.0" prefHeight="28.0" prefWidth="155.0" styleClass="labelsWithSmallerFonts" text="Choose Quantity" />
+        <Label id="produceChoose" layoutX="381.0" layoutY="15.0" prefHeight="28.0" prefWidth="155.0" styleClass="labelsWithSmallerFonts" text="Choose Quantity" />
+            <Label fx:id="labelProduceError" alignment="CENTER" contentDisplay="TOP" layoutX="381.0" layoutY="198.0" prefHeight="89.0" prefWidth="365.0" style="-fx-font-size: 25; -fx-wrap-text: true;" text="Please make sure to click ona  product and choose a positive quantity amount" textAlignment="CENTER" visible="false">
+               <font>
+                  <Font name="Comic Sans MS" size="9.0" />
+               </font>
+            </Label>
       </AnchorPane>
     </Tab>
     <Tab closable="false" text="Production Log">
@@ -75,22 +80,17 @@
     </Tab>
       <Tab closable="false" text="Employee">
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-              <TextField fx:id="textName" layoutX="27.0" layoutY="65.0" prefHeight="34.0" prefWidth="288.0"/>
-              <Label layoutX="141.0" layoutY="23.0" text="Name"/>
-              <Label layoutX="123.0" layoutY="125.0" text="Password"/>
-              <TextField fx:id="textPass" layoutX="27.0" layoutY="177.0" prefHeight="34.0" prefWidth="288.0"/>
-              <Button fx:id="btnEnter" layoutX="135.0" layoutY="246.0" mnemonicParsing="false"
-                      onAction="#enterEmployee" text="Enter"/>
-              <Button fx:id="employeeHelp" layoutX="545.0" layoutY="65.0" mnemonicParsing="false"
-                      onAction="#openEmployeeHelp" text="Help"/>
-              <Label fx:id="labelEmployeeHelp" layoutX="418.0" layoutY="151.0" prefHeight="159.0" prefWidth="321.0"
-                     style="-fx-wrap-text: true;"
-                     text="Name: First and last name with a space in between them Password: Lower case, upper case, and special character (!@#$%^&amp;*) Required"
-                     textAlignment="CENTER" visible="false"/>
+              <TextField fx:id="textName" layoutX="27.0" layoutY="65.0" prefHeight="34.0" prefWidth="288.0" />
+              <Label layoutX="141.0" layoutY="23.0" text="Name" />
+              <Label layoutX="123.0" layoutY="125.0" text="Password" />
+              <TextField fx:id="textPass" layoutX="27.0" layoutY="177.0" prefHeight="34.0" prefWidth="288.0" />
+              <Button fx:id="btnEnter" layoutX="135.0" layoutY="246.0" mnemonicParsing="false" onAction="#enterEmployee" text="Enter" />
+              <Button fx:id="employeeHelp" layoutX="545.0" layoutY="65.0" mnemonicParsing="false" onAction="#openEmployeeHelp" text="Help" />
+              <Label fx:id="labelEmployeeHelp" layoutX="418.0" layoutY="151.0" prefHeight="159.0" prefWidth="321.0" style="-fx-wrap-text: true;" text="Name: First and last name with a space in between them Password: Lower case, upper case, and special character (!@#$%^&amp;*) Required" textAlignment="CENTER" visible="false" />
           </AnchorPane>
       </Tab>
   </TabPane>
   <stylesheets>
-    <URL value="@style.css" />
+    <URL value="@../../../../../../OneDrive%20-%20Florida%20Gulf%20Coast%20University/Year%202/Fall%202020/COP3003/ProductionProject/src/main/resources/style.css" />
   </stylesheets>
 </AnchorPane>

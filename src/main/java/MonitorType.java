@@ -1,6 +1,6 @@
 /**
- * Author: Jairo Garciga
- * Enum for screen types
+ * Enum for screen types.
+ * @author Jairo Garciga
  */
 
 public enum MonitorType {

@@ -1,8 +1,9 @@
 /**
- * Extends the product class to create a movie player product
+ * Extends the product class to create a movie player product.
+ *
  * @author Jairo Garciga
  */
-public class MoviePlayer extends Product implements MultimediaControl{
+public class MoviePlayer extends Product implements MultimediaControl {
 
   public Screen screen;
   public MonitorType monitorType;
@@ -10,10 +11,11 @@ public class MoviePlayer extends Product implements MultimediaControl{
   /**
    * Constructor for the MoviePlayer class which calls Product constructor to set up
    * all the variables and then sets up it's object variables.
-   * @param name  The name of the movie player
-   * @param manufacturer  The manufacturer of the movie player
-   * @param screen  The screen type of the movie player
-   * @param monitorType The monitor type of the movie player
+   *
+   * @param name         The name of the movie player
+   * @param manufacturer The manufacturer of the movie player
+   * @param screen       The screen type of the movie player
+   * @param monitorType  The monitor type of the movie player
    */
   public MoviePlayer(String name, String manufacturer, Screen screen, MonitorType monitorType) {
 
@@ -24,18 +26,19 @@ public class MoviePlayer extends Product implements MultimediaControl{
   }
 
   /**
-   * Calls Product toString method and then appends the screen and monitor type
-   * @return  The string output of the moviePlayer object
+   * Calls Product toString method and then appends the screen and monitor type.
+   *
+   * @return The string output of the moviePlayer object
    */
   public String toString() {
 
     return super.toString() + String.format(
-        "\nScreen: %s\nMonitor Type: %s",
-        this.screen, this.monitorType);
+            "\nScreen: %s\nMonitor Type: %s",
+            this.screen, this.monitorType);
   }
 
   /**
-   * Output that the movie is playing
+   * Output that the movie is playing.
    */
   @Override
   public void play() {
@@ -43,7 +46,7 @@ public class MoviePlayer extends Product implements MultimediaControl{
   }
 
   /**
-   * Output that the movie is stopping
+   * Output that the movie is stopping.
    */
   @Override
   public void stop() {
@@ -51,7 +54,7 @@ public class MoviePlayer extends Product implements MultimediaControl{
   }
 
   /**
-   * Output that the player is going to the previous movie
+   * Output that the player is going to the previous movie.
    */
   @Override
   public void previous() {
@@ -59,7 +62,7 @@ public class MoviePlayer extends Product implements MultimediaControl{
   }
 
   /**
-   * Output that the player is going to the next movie
+   * Output that the player is going to the next movie.
    */
   @Override
   public void next() {

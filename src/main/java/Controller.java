@@ -1,24 +1,39 @@
 import java.io.FileInputStream;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Properties;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
+import javafx.scene.control.Tab;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 /**
  * The main class for the GUI, it holds every component and all
  * interactions the user can do.
+ *
  * @author Jairo Garciga
  */
 public class Controller {
 
-    /* I had to do some editing to the HR url because it would
-     * break whenever I attempted to add something to it.
-     * DB_CLOSE_DELAY=-1 Was used to fix this
-     */
+  /* I had to do some editing to the HR url because it would
+   * break whenever I attempted to add something to it.
+   * DB_CLOSE_DELAY=-1 Was used to fix this
+   */
   final String jdbc_driver = "org.h2.Driver";
   final String db_url = "jdbc:h2:./res/HR;DB_CLOSE_DELAY=-1";
   private final String user = "";
@@ -71,6 +86,9 @@ public class Controller {
   @FXML
   private Label labelEmployeeHelp;
 
+  @FXML
+  private Label labelProduceError;
+
   ArrayList<ProductionRecord> productionLog = new ArrayList<>();
 
   ArrayList<ProductionRecord> productionRun = new ArrayList<>();
@@ -115,14 +133,14 @@ public class Controller {
   }
 
   /**
-   * Sets the listViewProducts to the productLine
+   * Sets the listViewProducts to the productLine.
    */
   public void populateListChooseProduct() {
     listViewProducts.setItems(productLine);
   }
 
   /**
-   * Method called when the "Add Product Pressed" Button is pressed
+   * Method called when the "Add Product Pressed" Button is pressed.
    */
   public void btnAddProductPressed() {
 
@@ -133,7 +151,7 @@ public class Controller {
   }
 
   /**
-   * Method called when "Record Production" pressed
+   * Method called when "Record Production" pressed.
    */
   @FXML
   public void btnRecordProductionPressed() {
@@ -152,8 +170,8 @@ public class Controller {
    */
   @FXML
   public void enterEmployee() {
-      Employee tempEmployee = new Employee(textName.getText(), textPass.getText());
-      System.out.println(tempEmployee);
+    Employee tempEmployee = new Employee(textName.getText(), textPass.getText());
+    System.out.println(tempEmployee);
   }
 
   /**
@@ -169,13 +187,24 @@ public class Controller {
       String amount = cmbbChooseQuantity.getValue();
       tempProduct = listViewProducts.getSelectionModel().getSelectedItem();
 
-      for (int i = 0; i < Integer.parseInt(amount); i ++) {
+      if (Integer.parseInt(amount) <= 0) {
+        throw new NumberFormatException();
+      }
+
+      for (int i = 0; i < Integer.parseInt(amount); i++) {
         ProductionRecord tempRecord = new ProductionRecord(tempProduct);
         this.productionRun.add(tempRecord);
       }
 
     } catch (NullPointerException e) {
-      System.out.println("No listview item chosen");
+      labelProduceError.setVisible(true);
+      labelProduceError.setText("No product was chosen");
+
+    } catch (NumberFormatException e) {
+
+      labelProduceError.setVisible(true);
+      labelProduceError.setText("Input a positive number for the quantity");
+
     }
   }
 
@@ -192,7 +221,6 @@ public class Controller {
     Statement stmt;
 
     ItemType tempType = cmbbItemType.getValue();
-    String tempTypeString;
     String tempManufacturer = txtfManufacturer.getText();
     String tempProductName = txtfProductName.getText();
 
@@ -225,7 +253,7 @@ public class Controller {
         while (rs.next()) {
 
           tempProductName = rs.getString(2); //Grabs col 1,2,3
-          tempTypeString = rs.getString(4);
+
           tempManufacturer = rs.getString(3);
           System.out.println(tempProductName + " " + tempType + " "
                   + tempManufacturer);
@@ -256,7 +284,7 @@ public class Controller {
   public void addToProductionRecordDB() {
 
     Connection conn;
-    PreparedStatement preparedstmt;
+    PreparedStatement preparedStmt;
 
     try {
 
@@ -268,28 +296,28 @@ public class Controller {
 
       String sql = "INSERT INTO PRODUCTIONRECORD( product_id, serial_num, date_produced)"
               + "Values(?, ?, ?)";
-      preparedstmt = conn.prepareStatement(sql);
+      preparedStmt = conn.prepareStatement(sql);
 
 
-      for (ProductionRecord tempRecord: this.productionRun) {
+      for (ProductionRecord tempRecord : this.productionRun) {
 
         Timestamp timeStamp = new Timestamp(tempRecord.getProdDate().getTime());
 
         //Puts the corresponding String into the respective ? mark
-        preparedstmt.setInt(1, tempRecord.getProductID());
-        preparedstmt.setString(2, tempRecord.getSerialNum());
-        preparedstmt.setTimestamp(3, timeStamp);
-        preparedstmt.executeUpdate();
+        preparedStmt.setInt(1, tempRecord.getProductID());
+        preparedStmt.setString(2, tempRecord.getSerialNum());
+        preparedStmt.setTimestamp(3, timeStamp);
+        preparedStmt.executeUpdate();
 
       }
 
       // Clearing productionRun
       this.productionRun.clear();
       ProductionRecord.resetAllTypeCounts();
-      preparedstmt.close();
+      preparedStmt.close();
       conn.close();
 
-    } catch(ClassNotFoundException | SQLException e) {
+    } catch (ClassNotFoundException | SQLException e) {
       e.printStackTrace();
       databaseNotFound();
     }
@@ -298,11 +326,11 @@ public class Controller {
 
   /**
    * Connects to database and creates products from PRODUCT table
-   * Then adds these created products to the productLine
+   * Then adds these created products to the productLine.
    */
   public void loadProductList() {
 
-    this.productLine =  FXCollections.observableArrayList();
+    this.productLine = FXCollections.observableArrayList();
 
     Connection conn;
     Statement stmt;
@@ -353,9 +381,9 @@ public class Controller {
   }
 
   /**
-   * Connects to database and creates productionRecord objects from PRODUCTIONRECORD
+   * Connects to database and creates productionRecord objects from ProductionRecord
    * In order to calculate the right type totals updateTypeTotals is called.
-   * Finally adds the new productionRecord objects into productionLog
+   * Finally adds the new productionRecord objects into productionLog.
    */
   public void loadProductionLog() {
 
@@ -365,8 +393,6 @@ public class Controller {
     Connection conn;
     Statement stmt;
     PreparedStatement prep;
-
-    String tempName;
 
     try {
 
@@ -388,7 +414,7 @@ public class Controller {
         tempProductionRecord.setProductionNum(rs.getInt(1));
         tempProductionRecord.setSerialNum(rs.getString(3));
         tempProductionRecord.setProdDate(new Date(rs.getDate(4).getTime()));
-        ProductionRecord.updateTypeTotals(tempProductionRecord.getSerialNum().substring(3,5));
+        ProductionRecord.updateTypeTotals(tempProductionRecord.getSerialNum().substring(3, 5));
         // Necessary to update typeTotals to make sure future productionRecords
         // match with the proper serialNum
 
@@ -405,7 +431,7 @@ public class Controller {
       prep.close();
       conn.close();
 
-    } catch(ClassNotFoundException | SQLException e) {
+    } catch (ClassNotFoundException | SQLException e) {
       e.printStackTrace();
       databaseNotFound();
     }
@@ -418,7 +444,7 @@ public class Controller {
    */
   public void showProduction() {
 
-    for (ProductionRecord productRecord: this.productionLog) {
+    for (ProductionRecord productRecord : this.productionLog) {
 
       this.productionLogTxt.setText(this.productionLogTxt.getText() + productRecord.toString());
 
@@ -435,7 +461,7 @@ public class Controller {
   }
 
   /**
-   * Changes the visibility of the employee help text
+   * Changes the visibility of the employee help text.
    */
   @FXML
   void openEmployeeHelp() {
@@ -446,15 +472,16 @@ public class Controller {
 
   /**
    * Recursive method to reverse the password String, could theoretically
-   * be used for other Strings too
-   * @param pw  The string representing the reversed password in properties
+   * be used for other Strings too.
+   *
+   * @param pw The string representing the reversed password in properties
    * @return The String now reversed
    */
   public String reverseString(String pw) {
     if (pw.length() == 1) {
       return pw;
     }
-    return pw.substring(pw.length()-1) + reverseString(pw.substring(0,pw.length()-1));
+    return pw.substring(pw.length() - 1) + reverseString(pw.substring(0, pw.length() - 1));
   }
 
   /**
@@ -486,32 +513,10 @@ public class Controller {
 
   /**
    * Changes the message in the error message below manufacturer text box.
+   *
    * @param message The error message
    */
   public void setLabelErrorMessage(String message) {
     this.labelError.setText(message);
   }
-
-
-
-  /**
-   * Testing method to see if the child classes for Product work.
-   */
-  public static void testMultimedia() {
-    AudioPlayer newAudioProduct = new AudioPlayer("DP-X1A", "Onkyo",
-        "DSD/FLAC/ALAC/WAV/AIFF/MQA/Ogg-Vorbis/MP3/AAC", "M3U/PLS/WPL");
-    Screen newScreen = new Screen("720x480", 40, 22);
-    MoviePlayer newMovieProduct = new MoviePlayer("DBPOWER MK101", "OracleProduction", newScreen,
-        MonitorType.LCD);
-    ArrayList<MultimediaControl> productList = new ArrayList<MultimediaControl>();
-    productList.add(newAudioProduct);
-    productList.add(newMovieProduct);
-    for (MultimediaControl p : productList) {
-      System.out.println(p);
-      p.play();
-      p.stop();
-      p.next();
-      p.previous();
-      }
-    }
 }

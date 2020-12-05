@@ -8,7 +8,8 @@ public class AudioPlayer extends Product implements MultimediaControl {
   String supportedPlaylistFormats;
 
   /**
-   * Creates a specific Audio object, extends Product so it can implement it's methods and constructor
+   * Creates a specific Audio object, extends Product
+   * so it can implement it's methods and constructor.
    * @param name  The name of the AudioPlayer
    * @param manufacturer  The name of the Manufacturer
    * @param supportedAudioFormats The audio format, MP3, etc.
@@ -24,9 +25,9 @@ public class AudioPlayer extends Product implements MultimediaControl {
     this.supportedPlaylistFormats = supportedPlaylistFormats;
   }
 
-  /***
+  /**
    * First the method grabs the string from the parent class and concatenates
-   * it's portion to it afterwards
+   * it's portion to it afterwards.
    * @return  Returns a new string including supported audio and playlist formats
    */
   public String toString() {
@@ -37,7 +38,7 @@ public class AudioPlayer extends Product implements MultimediaControl {
   }
 
   /**
-   * Outputs that the device is playing
+   * Outputs that the device is playing.
    */
   @Override
   public void play() {
@@ -45,7 +46,7 @@ public class AudioPlayer extends Product implements MultimediaControl {
   }
 
   /**
-   * Outputs that the device is stopping
+   * Outputs that the device is stopping.
    */
   @Override
   public void stop() {
@@ -53,7 +54,7 @@ public class AudioPlayer extends Product implements MultimediaControl {
   }
 
   /**
-   * Outputs that the device is going to the previous song
+   * Outputs that the device is going to the previous song.
    */
   @Override
   public void previous() {
@@ -61,7 +62,7 @@ public class AudioPlayer extends Product implements MultimediaControl {
   }
 
   /**
-   * Outputs that the device is going to the next song
+   * Outputs that the device is going to the next song.
    */
   @Override
   public void next() {
